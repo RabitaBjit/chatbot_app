@@ -1,4 +1,3 @@
-// src/Chatbot.tsx
 import React, { useState } from "react";
 import "./Chatbot.css";
 
@@ -27,26 +26,26 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="chatbot">
       <div
         className={`chatbot-icon ${isOpen ? "hidden" : ""}`}
         onClick={toggleChatbot}
       >
         💬
       </div>
-      <div className={`chatbot-container ${isOpen ? "" : "hidden"}`}>
-        <div className="chatbot-header">
+      <div className={`chatbox ${isOpen ? "" : "hidden"}`}>
+        <div className="chatbox-header">
           <span>Chatbot</span>
           <button onClick={toggleChatbot}>✖</button>
         </div>
-        <div className="chatbot-messages">
+        <div className="chatbox-messages">
           {messages.map((msg, index) => (
-            <div key={index} className={`chatbot-message ${msg.sender}`}>
+            <div key={index} className={`chatbox-message ${msg.sender}`}>
               {msg.text}
             </div>
           ))}
         </div>
-        <div className="chatbot-input">
+        <div className="chatbox-input">
           <input
             type="text"
             placeholder="Type a message..."

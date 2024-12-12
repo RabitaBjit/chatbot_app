@@ -17,7 +17,7 @@
   iframe.style.borderRadius = "10px";
   iframe.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.3)";
   iframe.style.zIndex = "9999";
-
+  iframe.style.display = "none";
   // Append the iframe to the body of the document
   document.body.appendChild(iframe);
 })();
